@@ -1,7 +1,7 @@
   | _key_ |      _description_       |
   | :---: | :----------------: |
-| `LEFT` and `RIGHT` | Seek backward/forward 5 seconds. Shift+arrow does a 1 second exact seek |
-| `UP` and `DOWN` | Seek forward/backward 1 minute. Shift+arrow does a 5 second exact seek |
+| `LEFT` and `RIGHT` | Seek backward/forward 5 seconds. `Shift+arrow` does a 1 second exact seek |
+| `UP` and `DOWN` | Seek forward/backward 1 minute. `Shift+arrow` does a 5 second exact seek |
 | `Ctrl+LEFT` and `Ctrl+RIGHT` | Seek to the previous/next subtitle. Subject to some restrictions and might not always work; |
 | `Ctrl+Shift+LEFT` and `Ctrl+Shift+RIGHT` | Adjust subtitle delay so that the next or previous subtitle is displayed now. This is especially useful to sync subtitles to audio. |
 | `[` and `]` | Decrease/increase current playback speed by 10%. |
@@ -35,7 +35,26 @@
 | `L` | Toggle infinite looping. |
 | `Ctrl++` and `Ctrl+-` | Adjust audio delay (A/V sync) by +/- 0.1 seconds. |
 | `Shift+g` and `Shift+f` | Adjust subtitle font size by +/- 10%. |
-| `u` | Switch between applying only `--sub-ass-_`overrides (default) to SSA/ASS subtitles, and overriding them almost completely with the normal subtitle style. | | V | Toggle subtitle VSFilter aspect compatibility mode. | | r and R | Move subtitles up/down. The`t`key does the same as`R`currently, but use is discouraged. | | s | Take a screenshot. | | S | Take a screenshot, without subtitles. (Whether this works depends on VO driver support.) | | Ctrl+s | Take a screenshot, as the window shows it (with subtitles, OSD, and scaled video). | | PGUP and PGDWN | Seek to the beginning of the previous/next chapter. In most cases, "previous" will actually go to the beginning of the current chapter; see`--chapter-seek-threshold`. | | Shift+PGUP and Shift+PGDWN | Seek backward or forward by 10 minutes. (This used to be mapped to PGUP/PGDWN without Shift.) | | b | Activate/deactivate debanding. | | d | Cycle the deinterlacing filter. | | A | Cycle aspect ratio override. | | Ctrl+h | Toggle hardware video decoding on/off. | | Alt+LEFT, Alt+RIGHT, Alt+UP, Alt+DOWN | Move the video rectangle (panning). | | Alt++ and Alt+- | Change video zoom. | | Alt+BACKSPACE | Reset the pan/zoom settings. | | F8 | Show the playlist and the current position in it. | | F9 | Show the list of audio and subtitle streams. | | i and I | Show/toggle an overlay displaying statistics about the currently playing file such as codec, framerate, number of dropped frames and so on. | | DEL | Cycle OSC visibility between never / auto (mouse-move) / always | | ` | Show the console. (ESC closes it again.) |
+| `u` | Switch between applying only `--sub-ass-*`overrides (default) to SSA/ASS subtitles, and overriding them almost completely with the normal subtitle style. |
+| `V` | Toggle subtitle VSFilter aspect compatibility mode. |
+| `r` and `R` | Move subtitles up/down. The `t` key does the same as `R` currently, but use is discouraged. |
+| `s` | Take a screenshot. |
+| `S` | Take a screenshot, without subtitles. (Whether this works depends on VO driver support.) |
+| `Ctrl+s` | Take a screenshot, as the window shows it (with subtitles, OSD, and scaled video). |
+| `PGUP` and `PGDWN` | Seek to the beginning of the previous/next chapter. In most cases, "previous" will actually go to the beginning of the current chapter; see `--chapter-seek-threshold`. |
+| `Shift+PGUP` and `Shift+PGDWN` | Seek backward or forward by 10 minutes. (This used to be mapped to `PGUP/PGDWN` without `Shift`.) |
+| `b` | Activate/deactivate debanding. |
+| `d` | Cycle the deinterlacing filter. |
+| `A` | Cycle aspect ratio override. |
+| `Ctrl+h` | Toggle hardware video decoding on/off. |
+| `Alt+LEFT`, `Alt+RIGHT`, `Alt+UP`, `Alt+DOWN` | Move the video rectangle (panning). |
+| `Alt++` and `Alt+-` | Change video zoom. |
+| `Alt+BACKSPACE` | Reset the pan/zoom settings. |
+| `F8` | Show the playlist and the current position in it. |
+| `F9` | Show the list of audio and subtitle streams. |
+| `i` and `I` | Show/toggle an overlay displaying statistics about the currently playing file such as codec, framerate, number of dropped frames and so on. |
+| `DEL` | Cycle OSC visibility between never / auto (mouse-move) / always |
+| `~` | Show the console. (ESC closes it again.) |
 | `1` and `2` | Adjust contrast. |
 | `3` and `4` | Adjust brightness. |
 | `5` and `6` | Adjust gamma. |
