@@ -1,5 +1,7 @@
-  | _key_ |      _description_       |
-  | :---: | :----------------: |
+Source: [mpv.io](https://mpv.io/manual/stable/)
+
+| _key_ |      _description_       |
+| :---: | :----------------: |
 | `LEFT` and `RIGHT` | Seek backward/forward 5 seconds. `Shift+arrow` does a 1 second exact seek |
 | `UP` and `DOWN` | Seek forward/backward 1 minute. `Shift+arrow` does a 5 second exact seek |
 | `Ctrl+LEFT` and `Ctrl+RIGHT` | Seek to the previous/next subtitle. Subject to some restrictions and might not always work; |
