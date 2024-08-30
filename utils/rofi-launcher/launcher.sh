@@ -6,7 +6,7 @@ SCRIPTPATH="$(
 )"
 
 [ -f "$SCRIPTPATH/helper.sh" ] || {
-    notify-send -i "rofi" -a "dunstlog launcher" "helper script not found"
+    notify-send -i "rofi" -a "awesome-keybinds" "helper script not found"
     exit 1
 }
 
