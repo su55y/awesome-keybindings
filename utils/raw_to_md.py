@@ -23,7 +23,7 @@ if __name__ == "__main__":
         dest = source.with_name(f"{source.name}.md")
 
     source_reader = (row for row in open(source))
-    md_lines = ["| _key_ | description |\n", "| :---: | :----------------: |\n"]
+    md_lines = ["| _key_ | _description_ |\n", "| :---: | :----------------: |\n"]
     if src_url:
         md_lines.insert(0, f"[source]({src_url})\n")
 
