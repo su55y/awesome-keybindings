@@ -1,5 +1,5 @@
 ## Normal Mode
-| _key_ | description |
+| _key_ | _description_ |
 | :---: | :----------------: |
 | CTRL-A | add N to number at/after cursor |
 | CTRL-B | scroll N screens Backwards |

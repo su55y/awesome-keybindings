@@ -1,6 +1,6 @@
 [davatorium/rofi/source/keyb.c](https://github.com/davatorium/rofi/blob/558ab34aa3b6fc8fe6b1715b9750824999036910/source/keyb.c)
 
-|                _key_                 |                    description                    |
+|                _key_                 |                   _description_                   |
 | :----------------------------------: | :-----------------------------------------------: |
 |        Control+V,Shift+Insert        |              Paste primary selection              |
 |           Control+v,Insert           |                  Paste clipboard                  |
