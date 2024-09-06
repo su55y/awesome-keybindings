@@ -1,3 +1,5 @@
+## Source: [vim/vim/runtime/doc/index.txt](https://github.com/vim/vim/blob/66f65a46c5d169f20f780721d4f74d4729855b96/runtime/doc/index.txt)
+
 ## Normal Mode
 | _key_ | _description_ |
 | :---: | :----------------: |
