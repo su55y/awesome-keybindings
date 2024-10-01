@@ -3,212 +3,212 @@
 ## Normal Mode
 | _key_ | _description_ |
 | :---: | :----------------: |
-| CTRL-A | add N to number at/after cursor |
-| CTRL-B | scroll N screens Backwards |
-| CTRL-C | interrupt current (search) command |
-| CTRL-D | scroll Down N lines (default: half a screen) |
-| CTRL-E | scroll N lines upwards (N lines Extra) |
-| CTRL-F | scroll N screens Forward |
-| CTRL-G | display current file name and position |
-| &lt;BS&gt; | same as &quot;h&quot; |
-| CTRL-H | same as &quot;h&quot; |
-| &lt;Tab&gt; | go to N newer entry in jump list |
-| CTRL-I | same as &lt;Tab&gt; |
-| &lt;NL&gt; | same as &quot;j&quot; |
-| &lt;S-NL&gt; | same as CTRL-F |
-| CTRL-J | same as &quot;j&quot; |
-| CTRL-L | redraw screen |
-| &lt;CR&gt; | cursor to the first CHAR N lines lower |
-| &lt;S-CR&gt; | same as CTRL-F |
-| CTRL-M | same as &lt;CR&gt; |
-| CTRL-N | same as &quot;j&quot; |
-| CTRL-O | go to N older entry in jump list |
-| CTRL-P | same as &quot;k&quot; |
-| CTRL-R | redo changes which were undone with &#x27;u&#x27; |
-| CTRL-T | jump to N older Tag in tag list |
-| CTRL-U | scroll N lines Upwards (default: half a screen) |
-| CTRL-V | start blockwise Visual mode |
-| CTRL-W {char} | window commands, see |CTRL-W| |
-| CTRL-X | subtract N from number at/after cursor |
-| CTRL-Y | scroll N lines downwards |
-| CTRL-Z | suspend program (or start new shell) |
-| CTRL-\ CTRL-N | go to Normal mode (no-op) |
-| CTRL-\ CTRL-G | go to mode specified with &#x27;insertmode&#x27; |
-| CTRL-] | :ta to ident under cursor |
-| CTRL-^ | edit Nth alternate file (equivalent to &quot;:e #N&quot;) |
-| &lt;Space&gt; | same as &quot;l&quot; |
-| !{motion}{filter} | filter Nmove text through the {filter} command |
-| !!{filter} | filter N lines through the {filter} command |
-| &quot;{register} | use {register} for next delete, yank or put ({.%#:} only work with put) |
-| # | search backward for the Nth occurrence of the ident under the cursor |
-| $ | cursor to the end of Nth next line |
-| % | find the next (curly/square) bracket on this line and go to its match, or go to matching comment bracket, or go to matching preprocessor directive. |
-| {count}% | go to N percentage in the file |
-| &amp; | repeat last :s |
-| &#x27;{a-zA-Z0-9} | cursor to the first CHAR on the line with mark {a-zA-Z0-9} |
-| &#x27;&#x27; | cursor to the first CHAR of the line where the cursor was before the latest jump. |
-| &#x27;( | cursor to the first CHAR on the line of the start of the current sentence |
-| &#x27;) | cursor to the first CHAR on the line of the end of the current sentence |
-| &#x27;&lt; | cursor to the first CHAR of the line where highlighted area starts/started in the current buffer. |
-| &#x27;&gt; | cursor to the first CHAR of the line where highlighted area ends/ended in the current buffer. |
-| &#x27;[ | cursor to the first CHAR on the line of the start of last operated text or start of put text |
-| &#x27;] | cursor to the first CHAR on the line of the end of last operated text or end of put text |
-| &#x27;{ | cursor to the first CHAR on the line of the start of the current paragraph |
-| &#x27;} | cursor to the first CHAR on the line of the end of the current paragraph |
-| ( | cursor N sentences backward |
-| ) | cursor N sentences forward |
-| * | search forward for the Nth occurrence of the ident under the cursor |
-| + | same as &lt;CR&gt; |
-| &lt;S-+&gt; | same as CTRL-F |
-| , | repeat latest f, t, F or T in opposite direction N times |
-| - | cursor to the first CHAR N lines higher |
-| &lt;S--&gt; | same as CTRL-B |
-| . | repeat last change with count replaced with N |
-| /{pattern}&lt;CR&gt; | search forward for the Nth occurrence of {pattern} |
-| /&lt;CR&gt; | search forward for {pattern} of last search |
-| 0 | cursor to the first char of the line |
-| 1 | prepend to command to give a count |
-| 2 | &quot; |
-| 3 | &quot; |
-| 4 | &quot; |
-| 5 | &quot; |
-| 6 | &quot; |
-| 7 | &quot; |
-| 8 | &quot; |
-| 9 | &quot; |
-| : | start entering an Ex command |
-| {count}: | start entering an Ex command with range from current line to N-1 lines down |
-| ; | repeat latest f, t, F or T N times |
-| &lt;{motion} | shift Nmove lines one &#x27;shiftwidth&#x27; leftwards |
-| &lt;&lt; | shift N lines one &#x27;shiftwidth&#x27; leftwards |
-| ={motion} | filter Nmove lines through &quot;indent&quot; |
-| == | filter N lines through &quot;indent&quot; |
-| &gt;{motion} | shift Nmove lines one &#x27;shiftwidth&#x27; rightwards |
-| &gt;&gt; | shift N lines one &#x27;shiftwidth&#x27; rightwards |
-| ?{pattern}&lt;CR&gt; | search backward for the Nth previous occurrence of {pattern} |
-| ?&lt;CR&gt; | search backward for {pattern} of last search |
-| @{a-z} | execute the contents of register {a-z} N times |
-| @: | repeat the previous &quot;:&quot; command N times |
-| @@ | repeat the previous @{a-z} N times |
-| A | append text after the end of the line N times |
-| B | cursor N WORDS backward |
-| [&quot;x]C | change from the cursor position to the end of the line, and N-1 more lines [into register x]; synonym for &quot;c$&quot; |
-| [&quot;x]D | delete the characters under the cursor until the end of the line and N-1 more lines [into register x]; synonym for &quot;d$&quot; |
-| E | cursor forward to the end of WORD N |
-| F{char} | cursor to the Nth occurrence of {char} to the left |
-| G | cursor to line N, default last line |
-| H | cursor to line N from top of screen |
-| I | insert text before the first CHAR on the line N times |
-| J | Join N lines; default is 2 |
-| K | lookup Keyword under the cursor with &#x27;keywordprg&#x27; |
-| L | cursor to line N from bottom of screen |
-| M | cursor to middle line of screen |
-| N | repeat the latest &#x27;/&#x27; or &#x27;?&#x27; N times in opposite direction |
-| O | begin a new line above the cursor and insert text, repeat N times |
-| [&quot;x]P | put the text [from register x] before the cursor N times |
-| Q | switch to &quot;Ex&quot; mode |
-| R | enter replace mode: overtype existing characters, repeat the entered text N-1 times |
-| [&quot;x]S | delete N lines [into register x] and start insert; synonym for &quot;cc&quot;. |
-| T{char} | cursor till after Nth occurrence of {char} to the left |
-| U | undo all latest changes on one line |
-| V | start linewise Visual mode |
-| W | cursor N WORDS forward |
-| [&quot;x]X | delete N characters before the cursor [into register x] |
-| [&quot;x]Y | yank N lines [into register x]; synonym for &quot;yy&quot; |
-| ZZ | write if buffer changed and close window |
-| ZQ | close window without writing |
-| [{char} | square bracket command (see |[| below) |
-| ]{char} | square bracket command (see |]| below) |
-| ^ | cursor to the first CHAR of the line |
-| _ | cursor to the first CHAR N - 1 lines lower |
-| `{a-zA-Z0-9} | cursor to the mark {a-zA-Z0-9} |
-| `( | cursor to the start of the current sentence |
-| `) | cursor to the end of the current sentence |
-| `&lt; | cursor to the start of the highlighted area |
-| `&gt; | cursor to the end of the highlighted area |
-| `[ | cursor to the start of last operated text or start of putted text |
-| `] | cursor to the end of last operated text or end of putted text |
-| `` | cursor to the position before latest jump |
-| `{ | cursor to the start of the current paragraph |
-| `} | cursor to the end of the current paragraph |
-| a | append text after the cursor N times |
-| b | cursor N words backward |
-| [&quot;x]c{motion} | delete Nmove text [into register x] and start insert |
-| [&quot;x]cc | delete N lines [into register x] and start insert |
-| [&quot;x]d{motion} | delete Nmove text [into register x] |
-| [&quot;x]dd | delete N lines [into register x] |
-| do | same as &quot;:diffget&quot; |
-| dp | same as &quot;:diffput&quot; |
-| e | cursor forward to the end of word N |
-| f{char} | cursor to Nth occurrence of {char} to the right |
-| g{char} | extended commands, see |g| below |
-| h | cursor N chars to the left |
-| i | insert text before the cursor N times |
-| j | cursor N lines downward |
-| k | cursor N lines upward |
-| l | cursor N chars to the right |
-| m{A-Za-z} | set mark {A-Za-z} at cursor position |
-| n | repeat the latest &#x27;/&#x27; or &#x27;?&#x27; N times |
-| o | begin a new line below the cursor and insert text, repeat N times |
-| [&quot;x]p | put the text [from register x] after the cursor N times |
-| q{0-9a-zA-Z&quot;} | record typed characters into named register {0-9a-zA-Z&quot;} (uppercase to append) |
-| q | (while recording) stops recording |
-| q: | edit : command-line in command-line window |
-| q/ | edit / command-line in command-line window |
-| q? | edit ? command-line in command-line window |
-| r{char} | replace N chars with {char} |
-| [&quot;x]s | (substitute) delete N characters [into register x] and start insert |
-| t{char} | cursor till before Nth occurrence of {char} to the right |
-| u | undo changes |
-| v | start characterwise Visual mode |
-| w | cursor N words forward |
-| [&quot;x]x | delete N characters under and after the cursor [into register x] |
-| [&quot;x]y{motion} | yank Nmove text [into register x] |
-| [&quot;x]yy | yank N lines [into register x] |
-| z{char} | commands starting with &#x27;z&#x27;, see |z| below |
-| { | cursor N paragraphs backward |
-| | | cursor to column N |
-| } | cursor N paragraphs forward |
-| ~ | &#x27;tildeop&#x27; off: switch case of N characters under cursor and move the cursor N characters to the right |
-| ~{motion} | &#x27;tildeop&#x27; on: switch case of Nmove text |
-| &lt;C-End&gt; | same as &quot;G&quot; |
-| &lt;C-Home&gt; | same as &quot;gg&quot; |
-| &lt;C-Left&gt; | same as &quot;b&quot; |
-| &lt;C-LeftMouse&gt; | &quot;:ta&quot; to the keyword at the mouse click |
-| &lt;C-Right&gt; | same as &quot;w&quot; |
-| &lt;C-RightMouse&gt; | same as &quot;CTRL-T&quot; |
-| &lt;C-Tab&gt; | same as &quot;g&lt;Tab&gt;&quot; |
-| [&quot;x]&lt;Del&gt; | same as &quot;x&quot; |
-| {count}&lt;Del&gt; | remove the last digit from {count} |
-| &lt;Down&gt; | same as &quot;j&quot; |
-| &lt;End&gt; | same as &quot;$&quot; |
-| &lt;F1&gt; | same as &lt;Help&gt; |
-| &lt;Help&gt; | open a help window |
-| &lt;Home&gt; | same as &quot;0&quot; |
-| &lt;Insert&gt; | same as &quot;i&quot; |
-| &lt;Left&gt; | same as &quot;h&quot; |
-| &lt;LeftMouse&gt; | move cursor to the mouse click position |
-| &lt;MiddleMouse&gt; | same as &quot;gP&quot; at the mouse click position |
-| &lt;PageDown&gt; | same as CTRL-F |
-| &lt;PageUp&gt; | same as CTRL-B |
-| &lt;Right&gt; | same as &quot;l&quot; |
-| &lt;RightMouse&gt; | start Visual mode, move cursor to the mouse click position |
-| &lt;S-Down&gt; | same as CTRL-F |
-| &lt;S-Left&gt; | same as &quot;b&quot; |
-| &lt;S-LeftMouse&gt; | same as &quot;*&quot; at the mouse click position |
-| &lt;S-Right&gt; | same as &quot;w&quot; |
-| &lt;S-RightMouse&gt; | same as &quot;#&quot; at the mouse click position |
-| &lt;S-Up&gt; | same as CTRL-B |
-| &lt;Undo&gt; | same as &quot;u&quot; |
-| &lt;Up&gt; | same as &quot;k&quot; |
-| &lt;ScrollWheelDown&gt; | move window three lines down |
-| &lt;S-ScrollWheelDown&gt; | move window one page down |
-| &lt;ScrollWheelUp&gt; | move window three lines up |
-| &lt;S-ScrollWheelUp&gt; | move window one page up |
-| &lt;ScrollWheelLeft&gt; | move window six columns left |
-| &lt;S-ScrollWheelLeft&gt; | move window one page left |
-| &lt;ScrollWheelRight&gt; | move window six columns right |
-| &lt;S-ScrollWheelRight&gt; | move window one page right |
+| `CTRL-A` | add N to number at/after cursor |
+| `CTRL-B` | scroll N screens Backwards |
+| `CTRL-C` | interrupt current (search) command |
+| `CTRL-D` | scroll Down N lines (default: half a screen) |
+| `CTRL-E` | scroll N lines upwards (N lines Extra) |
+| `CTRL-F` | scroll N screens Forward |
+| `CTRL-G` | display current file name and position |
+| <code>&lt;BS&gt;</code> | same as &quot;h&quot; |
+| `CTRL-H` | same as &quot;h&quot; |
+| <code>&lt;Tab&gt;</code> | go to N newer entry in jump list |
+| `CTRL-I` | same as &lt;Tab&gt; |
+| <code>&lt;NL&gt;</code> | same as &quot;j&quot; |
+| <code>&lt;S-NL&gt;</code> | same as CTRL-F |
+| `CTRL-J` | same as &quot;j&quot; |
+| `CTRL-L` | redraw screen |
+| <code>&lt;CR&gt;</code> | cursor to the first CHAR N lines lower |
+| <code>&lt;S-CR&gt;</code> | same as CTRL-F |
+| `CTRL-M` | same as &lt;CR&gt; |
+| `CTRL-N` | same as &quot;j&quot; |
+| `CTRL-O` | go to N older entry in jump list |
+| `CTRL-P` | same as &quot;k&quot; |
+| `CTRL-R` | redo changes which were undone with &#x27;u&#x27; |
+| `CTRL-T` | jump to N older Tag in tag list |
+| `CTRL-U` | scroll N lines Upwards (default: half a screen) |
+| `CTRL-V` | start blockwise Visual mode |
+| `CTRL-W {char}` | window commands, see |CTRL-W| |
+| `CTRL-X` | subtract N from number at/after cursor |
+| `CTRL-Y` | scroll N lines downwards |
+| `CTRL-Z` | suspend program (or start new shell) |
+| `CTRL-\ CTRL-N` | go to Normal mode (no-op) |
+| `CTRL-\ CTRL-G` | go to mode specified with &#x27;insertmode&#x27; |
+| `CTRL-]` | :ta to ident under cursor |
+| `CTRL-^` | edit Nth alternate file (equivalent to &quot;:e #N&quot;) |
+| <code>&lt;Space&gt;</code> | same as &quot;l&quot; |
+| `!{motion}{filter}` | filter Nmove text through the {filter} command |
+| `!!{filter}` | filter N lines through the {filter} command |
+| <code>&quot;{register}</code> | use {register} for next delete, yank or put ({.%#:} only work with put) |
+| `#` | search backward for the Nth occurrence of the ident under the cursor |
+| `$` | cursor to the end of Nth next line |
+| `%` | find the next (curly/square) bracket on this line and go to its match, or go to matching comment bracket, or go to matching preprocessor directive. |
+| `{count}%` | go to N percentage in the file |
+| <code>&amp;</code> | repeat last :s |
+| <code>&#x27;{a-zA-Z0-9}</code> | cursor to the first CHAR on the line with mark {a-zA-Z0-9} |
+| <code>&#x27;&#x27;</code> | cursor to the first CHAR of the line where the cursor was before the latest jump. |
+| <code>&#x27;(</code> | cursor to the first CHAR on the line of the start of the current sentence |
+| <code>&#x27;)</code> | cursor to the first CHAR on the line of the end of the current sentence |
+| <code>&#x27;&lt;</code> | cursor to the first CHAR of the line where highlighted area starts/started in the current buffer. |
+| <code>&#x27;&gt;</code> | cursor to the first CHAR of the line where highlighted area ends/ended in the current buffer. |
+| <code>&#x27;[</code> | cursor to the first CHAR on the line of the start of last operated text or start of put text |
+| <code>&#x27;]</code> | cursor to the first CHAR on the line of the end of last operated text or end of put text |
+| <code>&#x27;{</code> | cursor to the first CHAR on the line of the start of the current paragraph |
+| <code>&#x27;}</code> | cursor to the first CHAR on the line of the end of the current paragraph |
+| `(` | cursor N sentences backward |
+| `)` | cursor N sentences forward |
+| `*` | search forward for the Nth occurrence of the ident under the cursor |
+| `+` | same as &lt;CR&gt; |
+| <code>&lt;S-+&gt;</code> | same as CTRL-F |
+| `,` | repeat latest f, t, F or T in opposite direction N times |
+| `-` | cursor to the first CHAR N lines higher |
+| <code>&lt;S--&gt;</code> | same as CTRL-B |
+| `.` | repeat last change with count replaced with N |
+| <code>/{pattern}&lt;CR&gt;</code> | search forward for the Nth occurrence of {pattern} |
+| <code>/&lt;CR&gt;</code> | search forward for {pattern} of last search |
+| `0` | cursor to the first char of the line |
+| `1` | prepend to command to give a count |
+| `2` | &quot; |
+| `3` | &quot; |
+| `4` | &quot; |
+| `5` | &quot; |
+| `6` | &quot; |
+| `7` | &quot; |
+| `8` | &quot; |
+| `9` | &quot; |
+| `:` | start entering an Ex command |
+| `{count}:` | start entering an Ex command with range from current line to N-1 lines down |
+| `;` | repeat latest f, t, F or T N times |
+| <code>&lt;{motion}</code> | shift Nmove lines one &#x27;shiftwidth&#x27; leftwards |
+| <code>&lt;&lt;</code> | shift N lines one &#x27;shiftwidth&#x27; leftwards |
+| `={motion}` | filter Nmove lines through &quot;indent&quot; |
+| `==` | filter N lines through &quot;indent&quot; |
+| <code>&gt;{motion}</code> | shift Nmove lines one &#x27;shiftwidth&#x27; rightwards |
+| <code>&gt;&gt;</code> | shift N lines one &#x27;shiftwidth&#x27; rightwards |
+| <code>?{pattern}&lt;CR&gt;</code> | search backward for the Nth previous occurrence of {pattern} |
+| <code>?&lt;CR&gt;</code> | search backward for {pattern} of last search |
+| `@{a-z}` | execute the contents of register {a-z} N times |
+| `@:` | repeat the previous &quot;:&quot; command N times |
+| `@@` | repeat the previous @{a-z} N times |
+| `A` | append text after the end of the line N times |
+| `B` | cursor N WORDS backward |
+| <code>[&quot;x]C</code> | change from the cursor position to the end of the line, and N-1 more lines [into register x]; synonym for &quot;c$&quot; |
+| <code>[&quot;x]D</code> | delete the characters under the cursor until the end of the line and N-1 more lines [into register x]; synonym for &quot;d$&quot; |
+| `E` | cursor forward to the end of WORD N |
+| `F{char}` | cursor to the Nth occurrence of {char} to the left |
+| `G` | cursor to line N, default last line |
+| `H` | cursor to line N from top of screen |
+| `I` | insert text before the first CHAR on the line N times |
+| `J` | Join N lines; default is 2 |
+| `K` | lookup Keyword under the cursor with &#x27;keywordprg&#x27; |
+| `L` | cursor to line N from bottom of screen |
+| `M` | cursor to middle line of screen |
+| `N` | repeat the latest &#x27;/&#x27; or &#x27;?&#x27; N times in opposite direction |
+| `O` | begin a new line above the cursor and insert text, repeat N times |
+| <code>[&quot;x]P</code> | put the text [from register x] before the cursor N times |
+| `Q` | switch to &quot;Ex&quot; mode |
+| `R` | enter replace mode: overtype existing characters, repeat the entered text N-1 times |
+| <code>[&quot;x]S</code> | delete N lines [into register x] and start insert; synonym for &quot;cc&quot;. |
+| `T{char}` | cursor till after Nth occurrence of {char} to the left |
+| `U` | undo all latest changes on one line |
+| `V` | start linewise Visual mode |
+| `W` | cursor N WORDS forward |
+| <code>[&quot;x]X</code> | delete N characters before the cursor [into register x] |
+| <code>[&quot;x]Y</code> | yank N lines [into register x]; synonym for &quot;yy&quot; |
+| `ZZ` | write if buffer changed and close window |
+| `ZQ` | close window without writing |
+| `[{char}` | square bracket command (see |[| below) |
+| `]{char}` | square bracket command (see |]| below) |
+| `^` | cursor to the first CHAR of the line |
+| `_` | cursor to the first CHAR N - 1 lines lower |
+| <code>`{a-zA-Z0-9}</code> | cursor to the mark {a-zA-Z0-9} |
+| <code>`(</code> | cursor to the start of the current sentence |
+| <code>`)</code> | cursor to the end of the current sentence |
+| <code>`&lt;</code> | cursor to the start of the highlighted area |
+| <code>`&gt;</code> | cursor to the end of the highlighted area |
+| <code>`[</code> | cursor to the start of last operated text or start of putted text |
+| <code>`]</code> | cursor to the end of last operated text or end of putted text |
+| <code>``</code> | cursor to the position before latest jump |
+| <code>`{</code> | cursor to the start of the current paragraph |
+| <code>`}</code> | cursor to the end of the current paragraph |
+| `a` | append text after the cursor N times |
+| `b` | cursor N words backward |
+| <code>[&quot;x]c{motion}</code> | delete Nmove text [into register x] and start insert |
+| <code>[&quot;x]cc</code> | delete N lines [into register x] and start insert |
+| <code>[&quot;x]d{motion}</code> | delete Nmove text [into register x] |
+| <code>[&quot;x]dd</code> | delete N lines [into register x] |
+| `do` | same as &quot;:diffget&quot; |
+| `dp` | same as &quot;:diffput&quot; |
+| `e` | cursor forward to the end of word N |
+| `f{char}` | cursor to Nth occurrence of {char} to the right |
+| `g{char}` | extended commands, see |g| below |
+| `h` | cursor N chars to the left |
+| `i` | insert text before the cursor N times |
+| `j` | cursor N lines downward |
+| `k` | cursor N lines upward |
+| `l` | cursor N chars to the right |
+| `m{A-Za-z}` | set mark {A-Za-z} at cursor position |
+| `n` | repeat the latest &#x27;/&#x27; or &#x27;?&#x27; N times |
+| `o` | begin a new line below the cursor and insert text, repeat N times |
+| <code>[&quot;x]p</code> | put the text [from register x] after the cursor N times |
+| <code>q{0-9a-zA-Z&quot;}</code> | record typed characters into named register {0-9a-zA-Z&quot;} (uppercase to append) |
+| `q` | (while recording) stops recording |
+| `q:` | edit : command-line in command-line window |
+| `q/` | edit / command-line in command-line window |
+| `q?` | edit ? command-line in command-line window |
+| `r{char}` | replace N chars with {char} |
+| <code>[&quot;x]s</code> | (substitute) delete N characters [into register x] and start insert |
+| `t{char}` | cursor till before Nth occurrence of {char} to the right |
+| `u` | undo changes |
+| `v` | start characterwise Visual mode |
+| `w` | cursor N words forward |
+| <code>[&quot;x]x</code> | delete N characters under and after the cursor [into register x] |
+| <code>[&quot;x]y{motion}</code> | yank Nmove text [into register x] |
+| <code>[&quot;x]yy</code> | yank N lines [into register x] |
+| `z{char}` | commands starting with &#x27;z&#x27;, see `z` below |
+| `{` | cursor N paragraphs backward |
+| `\|` | cursor to column N |
+| `}` | cursor N paragraphs forward |
+| `~` | &#x27;tildeop&#x27; off: switch case of N characters under cursor and move the cursor N characters to the right |
+| `~{motion}` | &#x27;tildeop&#x27; on: switch case of Nmove text |
+| <code>&lt;C-End&gt;</code> | same as &quot;G&quot; |
+| <code>&lt;C-Home&gt;</code> | same as &quot;gg&quot; |
+| <code>&lt;C-Left&gt;</code> | same as &quot;b&quot; |
+| <code>&lt;C-LeftMouse&gt;</code> | &quot;:ta&quot; to the keyword at the mouse click |
+| <code>&lt;C-Right&gt;</code> | same as &quot;w&quot; |
+| <code>&lt;C-RightMouse&gt;</code> | same as &quot;CTRL-T&quot; |
+| <code>&lt;C-Tab&gt;</code> | same as &quot;g&lt;Tab&gt;&quot; |
+| <code>[&quot;x]&lt;Del&gt;</code> | same as &quot;x&quot; |
+| <code>{count}&lt;Del&gt;</code> | remove the last digit from {count} |
+| <code>&lt;Down&gt;</code> | same as &quot;j&quot; |
+| <code>&lt;End&gt;</code> | same as &quot;$&quot; |
+| <code>&lt;F1&gt;</code> | same as &lt;Help&gt; |
+| <code>&lt;Help&gt;</code> | open a help window |
+| <code>&lt;Home&gt;</code> | same as &quot;0&quot; |
+| <code>&lt;Insert&gt;</code> | same as &quot;i&quot; |
+| <code>&lt;Left&gt;</code> | same as &quot;h&quot; |
+| <code>&lt;LeftMouse&gt;</code> | move cursor to the mouse click position |
+| <code>&lt;MiddleMouse&gt;</code> | same as &quot;gP&quot; at the mouse click position |
+| <code>&lt;PageDown&gt;</code> | same as CTRL-F |
+| <code>&lt;PageUp&gt;</code> | same as CTRL-B |
+| <code>&lt;Right&gt;</code> | same as &quot;l&quot; |
+| <code>&lt;RightMouse&gt;</code> | start Visual mode, move cursor to the mouse click position |
+| <code>&lt;S-Down&gt;</code> | same as CTRL-F |
+| <code>&lt;S-Left&gt;</code> | same as &quot;b&quot; |
+| <code>&lt;S-LeftMouse&gt;</code> | same as &quot;*&quot; at the mouse click position |
+| <code>&lt;S-Right&gt;</code> | same as &quot;w&quot; |
+| <code>&lt;S-RightMouse&gt;</code> | same as &quot;#&quot; at the mouse click position |
+| <code>&lt;S-Up&gt;</code> | same as CTRL-B |
+| <code>&lt;Undo&gt;</code> | same as &quot;u&quot; |
+| <code>&lt;Up&gt;</code> | same as &quot;k&quot; |
+| <code>&lt;ScrollWheelDown&gt;</code> | move window three lines down |
+| <code>&lt;S-ScrollWheelDown&gt;</code> | move window one page down |
+| <code>&lt;ScrollWheelUp&gt;</code> | move window three lines up |
+| <code>&lt;S-ScrollWheelUp&gt;</code> | move window one page up |
+| <code>&lt;ScrollWheelLeft&gt;</code> | move window six columns left |
+| <code>&lt;S-ScrollWheelLeft&gt;</code> | move window one page left |
+| <code>&lt;ScrollWheelRight&gt;</code> | move window six columns right |
+| <code>&lt;S-ScrollWheelRight&gt;</code> | move window one page right |
 ---
 ## Insert Mode
 | _key_ | description |
